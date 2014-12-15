@@ -1,11 +1,13 @@
 <div class="main-content">
   <h1>Dashboard</h1>
-  <h2 id="edit-settings-mobile"><%=  link_to "Edit Profile Settings", signup_path %></h2>
+  <h2 class="edit-settings-mobile"><%= link_to "Edit Profile Settings", edit_user_path(current_user) %></h2><br>
+  <h2 class="edit-settings-mobile"><%= link_to "Add New Experience", new_experience_path(current_user) %></h2>
+  <h2 class="edit-settings"><%= link_to "Edit Profile Settings", edit_user_path(current_user) %></h2><br>
+  <h2 class="edit-settings"><%= link_to "Add New Experience", new_experience_path(current_user) %></h2>
   <h2 id="orders"><u>Click to see current orders</u></h2>
   <% if current_user %>
   <%= current_user.artist_name %>
   <% end %>
-  <h2 id="edit-settings">Edit Profile Settings</h2>
   <div class="order-toggle hide">
     <h2 id="exp-head">Experience, Fan Name</h2>
     <div class="order-desc">

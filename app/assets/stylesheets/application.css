@@ -584,8 +584,10 @@ textarea {
 
 /* DASHBOARD */
 
-#edit-settings-mobile {
+.edit-settings-mobile {
   display: none;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 #orders {
@@ -595,19 +597,20 @@ textarea {
   cursor: pointer;
 }
 
-#edit-settings {
+.edit-settings {
 /*  background-color: orange;*/
   display: inline-block;
   float: right;
   margin-top: -27px;
   margin-right: 50px;
+  font-size: 16px;
 }
 
-#edit-settings a {
+.edit-settings a {
   color: black;
 }
 
-#edit-settings-mobile a {
+.edit-settings-mobile a {
   color: black;
 }
 
@@ -1253,14 +1256,14 @@ textarea {
     width: 90%;
   }
 
-  #edit-settings-mobile {
+  .edit-settings-mobile {
     display: block;
     margin-top: -10px;
     margin-right: 50px;
     margin-bottom: -10px;
   }
 
-  #edit-settings {
+  .edit-settings {
     display: none;
   }
 
@@ -1538,6 +1541,10 @@ textarea {
 
   .total h2 {
     margin-left: 0px;
+  }
+
+  #orders {
+    font-size: 22px;
   }
 
 }
