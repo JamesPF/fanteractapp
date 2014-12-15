@@ -19,7 +19,7 @@
       <h2><%= e.title %></h2>
       <p>( amount left )</p>
       <div class="exp-buttons">
-        <%= button_to "View", experiences_path(e.id), class: "exp-btn" %> 
+        <%= button_to "View", experience_path(e.id), :method => :get, class: "exp-btn" %> 
         <%= button_to "Edit", edit_experience_path(e.id), :method => :get, class: "exp-btn" %>
         <%= button_to "Delete", experience_path(e.id), :method => :delete, class: "exp-btn" %>
       </div>

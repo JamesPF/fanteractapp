@@ -2,10 +2,10 @@
   <h1><%= @experience.title %></h1>
   <div class="band-pic-small">
   </div>
-  <h2 class="num-price">Number Available: XX</h2>
-  <h2 class="num-price">Price: $XX.XX</h2>
+  <h2 class="num-price"><%= @experience.amount_available %> left</h2>
+  <h2 class="num-price">Price: <%= number_to_currency(@experience.price) %></h2>
   <button class="cta">BUY NOW!</button>
   <h2>Description</h2>
-  <p class="exp-blurb">This text field is where the description regarding the experience will go.  It will go over details including what you will get if you purchase it, which band members you will interact with, when you can do it, and the medium of choice.  This text field is where the description regarding the experience will go.  It will go over details including what you will get if you purchase it, which band members you will interact with, when you can do it, and the medium of choice.  This text field is where the description regarding the experience will go.  It will go over details including what you will get if you purchase it, which band members you will interact with, when you can do it, and the medium of choice.</p>
+  <p class="exp-blurb"><%= @experience.description %></p>
 </div>
 
