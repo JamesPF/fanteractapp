@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <div class="jumbotron-text">
+    <h1>Homepage Headline</h1>
+    <p>Experience and interact with your favorite bands and artists like never before.  Get started by searching for your favorite artists below.</p>
+        <%= form_tag ({controller: "results", action: "index"}) do %>
+          <%= submit_tag "Search", id: "search", class: 'search-button' %>
+          <%= text_field_tag :title, nil, placeholder: "Artist Name...", class: 'search-field' %>
+        <% end %>
+  </div>
+</div>
+<div class="featured-experiences">
+  <h1>Featured Experiences</h1>
+  <div class="single-experience">
+    <div class="hp-preview-pic">
+    </div>
+    <h3>Experience Title Goes Here</h3>
+    <h2>Artist Name Here</h2>
+  </div>
+  <div class="single-experience">
+    <div class="hp-preview-pic">
+    </div>
+    <h3>Experience Title Goes Here</h3>
+    <h2>Artist Name Here</h2>
+  </div>
+  <div class="single-experience">
+    <div class="hp-preview-pic">
+    </div>
+    <h3>Experience Title Goes Here</h3>
+    <h2>Artist Name Here</h2>
+  </div>
+</div>

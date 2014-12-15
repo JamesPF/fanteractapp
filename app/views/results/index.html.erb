@@ -1,0 +1,34 @@
+<div class="main-content">
+  <h1>Results for {artist name}</h1>
+  <div class="result">
+    <h2>Title of the Experience Goes Here</h2><h4> - (amount left)</h4>
+    <h4 class="h4-mobile">(amount left)</h4>
+    <div class="result-thumb">
+    </div>
+    <h3>Artist Name</h3>
+    <p>This is where a preview of the experience description will go.  It will detail the type of experience, when the experience can occur, as well as any other details that the artist deems important.  The description will be cut off after 200 characters.</p>
+    <input type="button" value="Check it Out!">
+  </div>
+  <div class="result">
+    <h2>Title of the Experience Goes Here</h2><h4> - (amount left)</h4>
+    <h4 class="h4-mobile">(amount left)</h4>
+    <div class="result-thumb">
+    </div>
+    <h3>Artist Name</h3>
+    <p>This is where a preview of the experience description will go.</p>
+    <input type="button" value="Check it Out!">
+  </div>
+</div>
+<script type="text/javascript">
+
+  $(function(){
+    $(".result p").each(function(i){
+      len=$(this).text().length;
+      if(len>210)
+      {
+        $(this).text($(this).text().substr(0,210)+'...');
+      }
+    });
+  });
+
+</script>

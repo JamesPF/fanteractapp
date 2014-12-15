@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fanteract</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="navigation">
+      <div class="res-logout">
+        <p>Logout</p>
+      </div>
+      <div class="res-dashboard">
+        <p>Dashboard</p>
+      </div>
+      <div class="logo">
+        <h1><%= link_to 'FANTERACT', home_path %></h1>
+      </div>
+      <div class="logout">
+        <%= link_to 'Log Out', logout_path, method: :delete %>
+      </div>
+      <div class="dashboard">
+        <%= link_to 'Dashboard', dashboard_path %>
+      </div>
+      <div class="search">
+        <%= form_tag ({controller: "results", action: "index"}) do %>
+          <%= submit_tag "Search", id: "search", class: 'search-button' %>
+          <%= text_field_tag :title, nil, placeholder: "Artist Name...", class: 'search-field' %>
+        <% end %>
+      </div>
+    </div>
+
+<%= yield %>
+
+    <div class="footer">
+      <p><%=link_to 'Artist Login', login_path %> | <%=link_to 'Artist Signup', signup_path %></p>
+    </div>
+  </div>
+</body>
+</html>

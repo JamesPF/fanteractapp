@@ -1,0 +1,43 @@
+<div class="main-content">
+  <h1>Dashboard</h1>
+  <h2 id="edit-settings-mobile"><%=  link_to "Edit Profile Settings", signup_path %></h2>
+  <h2 id="orders"><u>Click to see current orders</u></h2>
+  <h2 id="edit-settings">Edit Profile Settings</h2>
+  <div class="order-toggle hide">
+    <h2 id="exp-head">Experience, Fan Name</h2>
+    <div class="order-desc">
+      <p>The Experience Title Will Go Here, User Name</p>
+    </div>
+  </div>
+  <hr id="dash">
+  <h2>Listed Experiences</h2>
+  <div class="listed-exp">
+    <h2>The Experience Title Will Go Here</h2>
+    <p>( amount left )</p>
+    <div class="exp-buttons">
+      <input type="button" value="View">
+      <input type="button" value="Edit">
+      <input type="button" value="Delete">
+    </div>
+  </div>
+  <div class="listed-exp">
+    <h2>The Experience Title Will Go Here</h2>
+    <p>( amount left )</p>
+    <div class="exp-buttons">
+      <input type="button" value="View">
+      <input type="button" value="Edit">
+      <input type="button" value="Delete">
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  var main = function() {
+    $("#orders").click(function() {
+      $('.order-toggle').toggleClass("show");
+      console.log('it works');
+    });
+  };
+
+  $(document).ready(main);
+</script>

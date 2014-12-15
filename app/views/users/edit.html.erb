@@ -1,0 +1,33 @@
+<div class="main-content">
+  <h1>Edit Your Profile</h1>
+  <div class="upload-image">
+  </div>
+  <%= form_for @user, :html => {:class => "signup"} do |f| %>
+    <%= f.text_field :artist_name, placeholder: "Artist Name..." %><br>
+    <%= f.text_field :genre, placeholder: "Genre..." %><br>
+    <%= f.text_area :bio, placeholder: "Enter Your Bio Here..." %><br>
+    <hr>
+    <div class="info-left">
+      <h2>Contact Information</h2>
+      <%= f.text_field :contact_name, placeholder: "Contact Name..." %><br>
+      <%= f.text_field :address_1, placeholder: "Address 1..." %><br>
+      <%= f.text_field :address_2, placeholder: "Address 2..." %><br>
+      <%= f.text_field :city, placeholder: "City..." %><br>
+      <%= f.text_field :state, placeholder: "State..." %><br>
+      <%= f.text_field :zip_code, placeholder: "Zip Code..." %><br>
+      <%= f.text_field :email, placeholder: "Email..." %>
+    </div>
+    <div class="info-right">
+      <h2>Payment Information</h2>
+      <%= f.text_field :bank_name, placeholder: "Bank Name..." %><br>
+      <%= f.text_field :account_holder_name, placeholder: "Account Holder Name..." %><br>
+      <%= f.text_field :account_type, placeholder: "Account Type..." %><br>
+      <%= f.text_field :account_number, placeholder: "Account Number..." %><br>
+      <%= f.text_field :routing_number, placeholder: "Routing Number..." %><br>
+      <h2>Create a Password</h2>
+      <%= f.password_field :password_digest, placeholder: "Password..." %><br>
+      <%= f.password_field :password_confirmation, placeholder: "Password Confirmation..." %><br>
+      <%= f.submit "Update Info", class: "artist-submit" %>
+    </div>
+  <% end %>
+</div>
