@@ -5,7 +5,7 @@ class ExperiencesController < ApplicationController
   end
 
   def create
-    experience = Experience.new(experience_params)
+    experience = current_user.experiences.new(experience_params)
 
     respond_to do |format|
       if experience.save
@@ -26,7 +26,7 @@ class ExperiencesController < ApplicationController
     experience = Experience.find(params[:id])
     respond_to do |format|
       if experience.update_attributes(experience_params)
-        format.html { redirect_to dashboard }
+        format.html { redirect_to dashboard_path }
         format.json { render json: experiences, status: :ok }
       else
         format.html { render :edit }
@@ -36,12 +36,26 @@ class ExperiencesController < ApplicationController
   end
 
   def index
+    @experience = Experience.where(user_id: current_user)
+    
+    respond_to do |format|
+      format.html {  }
+      format.json { render json: @experience, status: :ok }
+    end
   end
 
   def destroy
+    experience = Experience.find(params[:id])
+    experience.destroy
+    respond_to do |format|
+      format.html { redirect_to dashboard_path }
+      format.json { head :no_content }
+    end
   end
 
   def show
+    @experience = Experience.find(params[:id])
+    @artist = User.find(@experience.user_id)
   end
 
 private
