@@ -31,14 +31,14 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @experiences = Experience.find_by_sql([
-      'SELECT experiences.title, experiences.amount_available, experiences.user_id, experiences.description ' +
-      'FROM experiences ' +
-      'INNER JOIN users ' +
-      'ON experiences.user_id = user.id ' +
-      'WHERE experience.user_id = ?',
-      "#{params[:id]}"
-      ])
+    # @experiences = Experience.find_by_sql([
+    #   'SELECT experiences.title, experiences.amount_available, experiences.user_id, experiences.description ' +
+    #   'FROM experiences ' +
+    #   'INNER JOIN users' +
+    #   'ON experiences.user_id = users.id' +
+    #   'WHERE experiences.user_id = ' +
+    #   "#{params[:id]}"
+    #   ])
   end
 
 private
