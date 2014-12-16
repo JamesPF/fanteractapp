@@ -6,8 +6,10 @@
       <div class="result">
         <h2><%= r.title %></h2><h4> - ( <%= r.amount_available %> more left )</h4>
         <h4 class="h4-mobile">( <%= r.amount_available %> more left )</h4>
-        <div class="result-thumb">
-        </div>
+
+
+          <% user = User.find(r.user_id) %>
+          <%= image_tag user.avatar.url(:thumb), class: "result-thumb" %>
         <h3><%= r.artist_name %></h3>
         <p><%= r.description %></p>
         <%= button_to "Check it Out!", experience_path(r), :method => :get  %>

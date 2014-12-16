@@ -1,7 +1,6 @@
 <div class="main-content">
   <h1><%= @experience.title %></h1>
-  <div class="band-pic-small">
-  </div>
+    <%= image_tag @artist.avatar.url(:small), class: "band-pic-small" %>
   <h2 class="num-price"><%= @experience.amount_available %> left</h2>
   <h2 class="num-price">Price: <%= number_to_currency(@experience.price) %></h2>
   <%= form_tag orders_path do %>

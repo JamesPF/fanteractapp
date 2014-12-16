@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params.require(:user).permit(:artist_name, :genre, :bio, :contact_name, :address_1, :address_2, :city, :state, :zip_code, :email, :bank_name, :account_holder_name, :account_type, :account_number, :routing_number, :password_digest))
+    @user = User.new(params.require(:user).permit(:artist_name, :genre, :bio, :contact_name, :address_1, :address_2, :city, :state, :zip_code, :email, :bank_name, :account_holder_name, :account_type, :account_number, :routing_number, :password_digest, :avatar))
     @user.save
     session[:user_id] = @user.id
     id = User.last[:id]
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 private
 
   def user_params
-    params.require(:user).permit(:artist_name, :genre, :bio, :contact_name, :address_1, :address_2, :city, :state, :zip_code, :email, :bank_name, :account_holder_name, :account_type, :account_number, :routing_number, :password_digest)
+    params.require(:user).permit(:artist_name, :genre, :bio, :contact_name, :address_1, :address_2, :city, :state, :zip_code, :email, :bank_name, :account_holder_name, :account_type, :account_number, :routing_number, :password_digest, :avatar)
   end
 
 end

@@ -1,10 +1,10 @@
 class ResultsController < ApplicationController
 
-  def index
+  def index    
     @results = Experience.all
     @results = @results.joins(:user)
     @results = Experience.find_by_sql([
-      'SELECT experiences.id, experiences.title, users.artist_name, experiences.description, experiences.amount_available ' +
+      'SELECT experiences.id, experiences.title, users.artist_name, experiences.description, experiences.amount_available, experiences.user_id ' +
       'FROM experiences ' +
       'INNER JOIN users ' +
       'ON experiences.user_id = users.id ' +
