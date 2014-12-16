@@ -11,9 +11,6 @@ class ResultsController < ApplicationController
       'WHERE lower(users.artist_name) LIKE ? OR lower(experiences.title) LIKE ?',
       "%#{params[:title].downcase}%", "%#{params[:title].downcase}%"
       ])
-
-
-
   end
 
   def create
