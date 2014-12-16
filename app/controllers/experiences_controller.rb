@@ -38,10 +38,10 @@ class ExperiencesController < ApplicationController
   def index
     @experience = Experience.where(user_id: current_user)
     
-    respond_to do |format|
-      format.html {  }
-      format.json { render json: @experience, status: :ok }
-    end
+    # respond_to do |format|
+    #   format.html {  }
+    #   format.json { render json: @experience, status: :ok }
+    # end
   end
 
   def destroy

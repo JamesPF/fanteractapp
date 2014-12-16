@@ -4,7 +4,10 @@
   </div>
   <h2 class="num-price"><%= @experience.amount_available %> left</h2>
   <h2 class="num-price">Price: <%= number_to_currency(@experience.price) %></h2>
-  <button class="cta">BUY NOW!</button>
+  <%= form_tag orders_path do %>
+  <%= hidden_field_tag :experience_id, @experience.id %>
+  <button class="cta"><%= link_to "BUY NOW!", new_order_path %></button>
+  <% end %>
   <h2>Description</h2>
   <p class="exp-blurb"><%= @experience.description %></p>
 </div>
