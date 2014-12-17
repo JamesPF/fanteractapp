@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @experience = Experience.find(@order.experience_id)
   end
 
 private
