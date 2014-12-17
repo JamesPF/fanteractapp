@@ -2,32 +2,31 @@
   <h1>Edit Your Profile</h1>
   <%= image_tag @user.avatar.url(:large), class: "upload-image" %>
   <%= form_for @user, :html => {:multipart => true, :class => "signup"} do |f| %>
-    <%= f.file_field :avatar %><br>
-    <%= f.text_field :artist_name, placeholder: "Artist Name..." %><br>
-    <%= f.text_field :genre, placeholder: "Genre..." %><br>
-    <%= f.text_area :bio, placeholder: "Enter Your Bio Here..." %><br>
+    <%= f.file_field :avatar, :required => true %><br>
+    <%= f.text_field :artist_name, :required => true, placeholder: "Artist Name..." %><br>
+    <%= f.text_field :genre, :required => true, placeholder: "Genre..." %><br>
+    <%= f.text_area :bio, :required => true, placeholder: "Enter Your Bio Here..." %><br>
     <hr>
     <div class="info-left">
       <h2>Contact Information</h2>
-      <%= f.text_field :contact_name, placeholder: "Contact Name..." %><br>
-      <%= f.text_field :address_1, placeholder: "Address 1..." %><br>
+      <%= f.text_field :contact_name, :required => true, placeholder: "Contact Name..." %><br>
+      <%= f.text_field :address_1, :required => true, placeholder: "Address 1..." %><br>
       <%= f.text_field :address_2, placeholder: "Address 2..." %><br>
-      <%= f.text_field :city, placeholder: "City..." %><br>
-      <%= f.text_field :state, placeholder: "State..." %><br>
-      <%= f.text_field :zip_code, placeholder: "Zip Code..." %><br>
-      <%= f.text_field :email, placeholder: "Email..." %>
+      <%= f.text_field :city, :required => true, placeholder: "City..." %><br>
+      <%= f.text_field :state, :required => true, placeholder: "State..." %><br>
+      <%= f.text_field :zip_code, :required => true, placeholder: "Zip Code..." %><br>
+      <%= f.text_field :email, :required => true, placeholder: "Email..." %>
     </div>
     <div class="info-right">
       <h2>Payment Information</h2>
-      <%= f.text_field :bank_name, placeholder: "Bank Name..." %><br>
-      <%= f.text_field :account_holder_name, placeholder: "Account Holder Name..." %><br>
-      <%= f.text_field :account_type, placeholder: "Account Type..." %><br>
-      <%= f.text_field :account_number, placeholder: "Account Number..." %><br>
-      <%= f.text_field :routing_number, placeholder: "Routing Number..." %><br>
+      <%= f.text_field :bank_name, :required => true, placeholder: "Bank Name..." %><br>
+      <%= f.text_field :account_holder_name, :required => true, placeholder: "Account Holder Name..." %><br>
+      <%= f.text_field :account_type, :required => true, placeholder: "Account Type..." %><br>
+      <%= f.text_field :account_number, :required => true, placeholder: "Account Number..." %><br>
+      <%= f.text_field :routing_number, :required => true, placeholder: "Routing Number..." %><br>
       <h2>Create a Password</h2>
-      <%= f.password_field :password, placeholder: "Password..." %><br>
-      <%= f.password_field :password_confirmation, placeholder: "Password Confirmation..." %><br>
-      <%= f.file_field :avatar %><br>
+      <%= f.password_field :password, :required => true, placeholder: "Password..." %><br>
+      <%= f.password_field :password_confirmation, :required => true, placeholder: "Password Confirmation..." %><br>
       <%= f.submit "Create Profile", class: "artist-submit" %>
     </div>
   <% end %>
