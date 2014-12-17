@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(version: 20141216210529) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "phone_number"
+    t.integer  "phone_number",    limit: 8
     t.string   "card_name"
-    t.integer  "card_number"
+    t.integer  "card_number",     limit: 8
     t.string   "expiration_date"
     t.integer  "security_code"
     t.string   "address_1"
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 20141216210529) do
     t.string   "bank_name"
     t.string   "account_holder_name"
     t.string   "account_type"
-    t.integer  "account_number"
-    t.integer  "routing_number"
+    t.integer  "account_number",      limit: 8
+    t.integer  "routing_number",      limit: 8
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "avatar_file_name"
