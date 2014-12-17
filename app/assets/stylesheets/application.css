@@ -1264,7 +1264,7 @@ textarea {
   }
 
   .right-billing input {
-    margin-left: 55px;
+    margin-left: 0px;
   }
 
   .right-billing .checkout-submit {
@@ -1369,10 +1369,6 @@ textarea {
 
   .exp-buttons {
     margin-top: 4px;  
-  }
-
-  .right-billing input {
-    margin-left: 5px;
   }
 
   .checkout h2 {
