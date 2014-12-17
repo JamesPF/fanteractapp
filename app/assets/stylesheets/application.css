@@ -1247,7 +1247,7 @@ textarea {
   }
 
   .left-billing {
-    background-color: green;
+ /*   background-color: green;*/
     display: block;
     float: none;
     margin: 0 auto;
