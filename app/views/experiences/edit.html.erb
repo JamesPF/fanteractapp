@@ -1,11 +1,11 @@
 <div class="main-content">
   <h1>Edit Your Experience</h1>
   <%= form_for @experience, :html => { :class => "exp-create"} do |f| %>
-    <%= f.text_field :title, placeholder: "Experience Title..." %><br>
-    <%= f.text_field :price, placeholder: "Price..." %><br>
-    <%= f.text_field :amount_available, placeholder: "Amount Available..." %><br>
-    <%= f.text_field :availability, placeholder: "Availability..." %><br>
-    <%= f.text_area :description, placeholder: "Enter Description..." %><br>
+    <%= f.text_field :title, :required => true, placeholder: "Experience Title..." %><br>
+    <%= f.text_field :price, :required => true, placeholder: "Price..." %><br>
+    <%= f.text_field :amount_available, :required => true, placeholder: "Amount Available..." %><br>
+    <%= f.text_field :availability, :required => true, placeholder: "Availability..." %><br>
+    <%= f.text_area :description, :required => true, placeholder: "Enter Description..." %><br>
     <%= f.submit "Submit Updates", class: "exp-submit" %>
   <% end %>
 </div>

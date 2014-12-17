@@ -3,25 +3,25 @@
   <%= form_for @order, :html => { :class => "checkout" }, url: {action: "create"} do |f| %>
     <div class="left-billing">
       <h2>Basic Contact Info</h2>
-        <%= f.text_field :first_name, placeholder: "First Name..." %><br>
-        <%= f.text_field :last_name, placeholder: "Last Name..." %><br>
-        <%= f.text_field :email, placeholder: "Email..." %><br>
-        <%= f.text_field :phone_number, placeholder: "Phone..." %><br>
+        <%= f.text_field :first_name, :required => true, placeholder: "First Name..." %><br>
+        <%= f.text_field :last_name, :required => true, placeholder: "Last Name..." %><br>
+        <%= f.text_field :email, :required => true, placeholder: "Email..." %><br>
+        <%= f.text_field :phone_number, :required => true, placeholder: "Phone..." %><br>
         <h2>Credit Card Info</h2>
-        <%= f.text_field :card_name, placeholder: "Name on Card..." %><br>
-        <%= f.text_field :card_number, placeholder: "Card Number..." %><br>
-        <%= f.text_field :expiration_date, placeholder: "Expiration Date..." %><br>
-        <%= f.text_field :security_code, placeholder: "Security Code..." %><br>
+        <%= f.text_field :card_name, :required => true, placeholder: "Name on Card..." %><br>
+        <%= f.text_field :card_number, :required => true, placeholder: "Card Number..." %><br>
+        <%= f.text_field :expiration_date, :required => true, placeholder: "Expiration Date..." %><br>
+        <%= f.text_field :security_code, :required => true, placeholder: "Security Code..." %><br>
     </div>
     <div class="right-billing">
       <h2>Billing Address</h2>
-        <%= f.text_field :address_1, placeholder: "Address 1..." %><br>
+        <%= f.text_field :address_1, :required => true, placeholder: "Address 1..." %><br>
         <%= f.text_field :address_2, placeholder: "Address 2..." %><br>
-        <%= f.text_field :city, placeholder: "City..." %><br>
-        <%= f.text_field :state, placeholder: "State..." %><br>
-        <%= f.text_field :country, placeholder: "Country..." %><br>
-        <%= f.text_field :zip_code, placeholder: "Zip Code..." %><br>
-        <%= f.hidden_field :experience_id, :value => @experience.id %>
+        <%= f.text_field :city, :required => true, placeholder: "City..." %><br>
+        <%= f.text_field :state, :required => true, placeholder: "State..." %><br>
+        <%= f.text_field :country, :required => true, placeholder: "Country..." %><br>
+        <%= f.text_field :zip_code, :required => true, placeholder: "Zip Code..." %><br>
+        <%= f.hidden_field :experience_id, :required => true, :value => @experience.id %>
         <%= f.submit "Place Order", class: "checkout-submit" %>
     </div>
   <% end %>
