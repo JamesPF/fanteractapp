@@ -1,5 +1,8 @@
 class ExperiencesController < ApplicationController
 
+  skip_before_filter :authorize, only: [:show]
+  before_filter :experience_edits, only: [:edit, :update]
+
   def new
     @experience = Experience.new
   end
@@ -62,6 +65,10 @@ private
 
   def experience_params
     params.require(:experience).permit(:title, :price, :amount_available, :availability, :description)
+  end
+
+  def experience_edits
+    redirect_to home_path if current_user.id != Experience.find(params[:id]).user_id
   end
 
 end

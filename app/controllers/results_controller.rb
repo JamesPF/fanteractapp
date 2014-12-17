@@ -1,5 +1,7 @@
 class ResultsController < ApplicationController
 
+  skip_before_filter :authorize
+
   def index    
     @results = Experience.all
     @results = @results.joins(:user)

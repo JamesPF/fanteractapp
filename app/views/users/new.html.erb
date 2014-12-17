@@ -1,5 +1,5 @@
 <div class="main-content">
-  <h1>Edit Your Profile</h1>
+  <h1>Create Your Profile</h1>
   <%= image_tag @user.avatar.url(:large), class: "upload-image" %>
   <%= form_for @user, :html => {:multipart => true, :class => "signup"} do |f| %>
     <%= f.file_field :avatar, :required => true %><br>

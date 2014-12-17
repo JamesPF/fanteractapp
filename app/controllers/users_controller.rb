@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  before_filter :user_edits, only: [:edit, :update]
+  skip_before_filter :authorize, only: [:new, :create, :show]
+
   def new
     @user = User.new
   end
@@ -45,6 +48,10 @@ private
 
   def user_params
     params.require(:user).permit(:artist_name, :genre, :bio, :contact_name, :address_1, :address_2, :city, :state, :zip_code, :email, :bank_name, :account_holder_name, :account_type, :account_number, :routing_number, :password, :password_confirmation, :avatar)
+  end
+
+  def user_edits
+    redirect_to home_path if current_user != User.find(params[:id])
   end
 
 end
