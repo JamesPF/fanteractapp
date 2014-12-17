@@ -2,6 +2,7 @@
   <h1>Edit Your Profile</h1>
   <%= image_tag @user.avatar.url(:large), class: "upload-image" %>
   <%= form_for @user, :html => {:multipart => true, :class => "signup"} do |f| %>
+    <%= f.file_field :avatar %><br>
     <%= f.text_field :artist_name, placeholder: "Artist Name..." %><br>
     <%= f.text_field :genre, placeholder: "Genre..." %><br>
     <%= f.text_area :bio, placeholder: "Enter Your Bio Here..." %><br>

@@ -7,8 +7,10 @@ Fanteractapp::Application.routes.draw do
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
   resources :users, :except => [:index]
-  resources :experiences
-  resources :orders, :only => [:show, :create, :new]
+
+  resources :experiences do
+    resources :orders, :only => [:show, :create, :new]
+  end
 
   resources :sessions
   resources :results, :except => [:create]

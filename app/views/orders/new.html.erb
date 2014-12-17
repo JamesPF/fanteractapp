@@ -2,7 +2,7 @@
   <h1>Complete Your Order</h1>
   <div class="left-billing">
     <h2>Basic Contact Info</h2>
-    <%= form_for @order, :html => { :class => "checkout" } do |f| %>
+    <%= form_for @order, :html => { :class => "checkout" }, url: {action: "create"} do |f| %>
       <%= f.text_field :first_name, placeholder: "First Name..." %><br>
       <%= f.text_field :last_name, placeholder: "Last Name..." %><br>
       <%= f.text_field :email, placeholder: "Email..." %><br>
@@ -21,6 +21,7 @@
       <%= f.text_field :state, placeholder: "State..." %><br>
       <%= f.text_field :country, placeholder: "Country..." %><br>
       <%= f.text_field :zip_code, placeholder: "Zip Code..." %><br>
+      <%= f.hidden_field :experience_id, :value => @experience.id %>
       <%= f.submit "Place Order", class: "checkout-submit" %>
     <% end %>
   </div>
