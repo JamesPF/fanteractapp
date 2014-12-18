@@ -1,12 +1,9 @@
 <div class="main-content">
-  <h1>Dashboard</h1>
+  <h1><%= current_user.artist_name %>'s Dashboard</h1>
   <h2 class="edit-settings-mobile"><%= link_to "Edit Profile Settings", edit_user_path(current_user) %></h2><br>
   <h2 class="edit-settings-mobile"><%= link_to "Add New Experience", new_experience_path(current_user) %></h2>
   <h2 class="edit-settings"><%= link_to "Edit Profile Settings", edit_user_path(current_user) %></h2><br>
   <h2 class="edit-settings"><%= link_to "Add New Experience", new_experience_path(current_user) %></h2>
-  <% if current_user %>
-  <p>Welcome, <%= current_user.artist_name %></p>
-  <% end %>
   <hr id="dash">
   <h2>Listed Experiences</h2>
   <% @experience.each do |e| %>

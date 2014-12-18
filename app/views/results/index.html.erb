@@ -4,8 +4,7 @@
   <% if @results %>
     <% @results.each do |r| %>
       <div class="result">
-        <h2><%= r.title %></h2><h4> - ( <%= r.amount_available %> more left )</h4>
-        <h4 class="h4-mobile">( <%= r.amount_available %> more left )</h4>
+        <h2><%= r.title %></h2>
 
 
           <% user = User.find(r.user_id) %>

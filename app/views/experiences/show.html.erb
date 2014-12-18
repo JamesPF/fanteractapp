@@ -1,7 +1,7 @@
 <div class="main-content">
   <h1><%= @experience.title %></h1>
     <%= image_tag @artist.avatar.url(:small), class: "band-pic-small" %>
-  <h2 class="num-price"><%= @experience.amount_available %> left</h2>
+  <h2 class="num-price"><%= link_to "See more from #{@artist.artist_name}", user_path(@artist) %></h2>
   <h2 class="num-price">Price: <%= number_to_currency(@experience.price) %></h2>
   <%= hidden_field_tag :experience_id, @experience.id %>
   <button class="cta"><%= link_to "BUY NOW!", new_experience_order_path(@experience) %></button>

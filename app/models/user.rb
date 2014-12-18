@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates_presence_of :city
   validates_presence_of :state
   validates_presence_of :zip_code
+  validates_presence_of :email
   validates_presence_of :bank_name
   validates_presence_of :account_holder_name
   validates_presence_of :account_type
