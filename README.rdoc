@@ -1,28 +1,32 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Author
+James Felz
 
-Things you may want to cover:
+Fanteract is an innovative way of connecting musicians and fans through a variety of interactive experiences.  Musicians are able to create and sell a variety of experiences for fans, ranging from meet-and-greets, to Skype calls, to song critiques.  Fans now have access to numerous unique opporunitities to interact with their favorite artists.  Artists are now able to earn money, even if they're not touring or they don't currently have an album out.  This frees them from dependancy on album sales, which have been on a steady decline, and touring, which for smaller artists, is generally highly unprofitable.
 
-* Ruby version
+####Ruby version
+This application was built using Ruby 2.1.2
 
-* System dependencies
+####Rails version
+This application is built on Rails version 4.0.4
 
-* Configuration
+####System dependencies
+This application requires paperclip.
 
-* Database creation
+gem "paperclip", "~> 4.2"
 
-* Database initialization
+####Configuration
+Do a git clone and a bundle install.
+
+####Database creation
+Do a rake db:create
+
+####Database initialization
+Do a rake db:migrate.
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+####Deployment instructions
+heroku create, git push heroku master, heroku rake assets:precompile,
+RAILS_ENV=production bundle exec rake assets:precompile, git add -> commit -> push, heroku open, heroku run rake db:seed
