@@ -9,7 +9,6 @@
   <% @experience.each do |e| %>
     <div class="listed-exp">
       <h2><%= e.title %></h2>
-      <p>( amount left )</p>
       <div class="exp-buttons">
         <%= button_to "View", experience_path(e.id), :method => :get, class: "exp-btn" %> 
         <%= button_to "Edit", edit_experience_path(e.id), :method => :get, class: "exp-btn" %>

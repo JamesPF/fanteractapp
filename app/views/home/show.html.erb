@@ -1,10 +1,10 @@
 <div class="jumbotron">
   <div class="jumbotron-text">
-    <h1>Homepage Headline</h1>
-    <p>Experience and interact with your favorite bands and artists like never before.  Get started by searching for your favorite artists below.</p>
+    <h1>Start Now</h1>
+    <p>Experience and interact with your favorite bands and artists like never before.  Search for your favorite artists below.</p>
         <%= form_tag ({controller: "results", action: "index"}) do %>
           <%= submit_tag "Search", id: "search", class: 'search-button' %>
-          <%= text_field_tag :title, nil, placeholder: "Artist Name...", class: 'search-field' %>
+          <%= text_field_tag :title, nil, placeholder: "Experience or Artist Name...", class: 'search-field' %>
         <% end %>
   </div>
 </div>
@@ -12,20 +12,23 @@
   <h1>Featured Experiences</h1>
   <div class="single-experience">
     <div class="hp-preview-pic">
+      <%= link_to image_tag("ytg.jpg", :width => 340, :height => 255, class: "hp-preview-pic"), "http://localhost:3000/experiences/2?" %>
     </div>
-    <h3>Experience Title Goes Here</h3>
-    <h2>Artist Name Here</h2>
+    <h3><%= link_to("Skype Call", "http://localhost:3000/experiences/2?") %></h3>
+    <h2><%= link_to("Young the Giant", "http://localhost:3000/experiences/2?") %></h2>
   </div>
   <div class="single-experience">
     <div class="hp-preview-pic">
+      <%= link_to image_tag("grouplove-01.jpg", :width => 340, :height => 255, class: "hp-preview-pic"), "http://localhost:3000/experiences/3?" %>
     </div>
-    <h3>Experience Title Goes Here</h3>
-    <h2>Artist Name Here</h2>
+    <h3><%= link_to("Meet Grouplove", "http://localhost:3000/experiences/3?") %></h3>
+    <h2><%= link_to("Grouplove", "http://localhost:3000/experiences/3?") %></h2>
   </div>
   <div class="single-experience">
     <div class="hp-preview-pic">
+      <%= link_to image_tag("kimbra.jpg", :width => 340, :height => 255, class: "hp-preview-pic"), "http://localhost:3000/experiences/5?" %>
     </div>
-    <h3>Experience Title Goes Here</h3>
-    <h2>Artist Name Here</h2>
+    <h3><%= link_to("Birthday Phone Call", "http://localhost:3000/experiences/5?") %></h3>
+    <h2><%= link_to("Kimbra", "http://localhost:3000/experiences/5?") %></h2>
   </div>
 </div>

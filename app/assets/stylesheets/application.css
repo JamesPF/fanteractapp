@@ -274,10 +274,20 @@ form {
   font-family: Arial;
 }
 
+.single-experience h2 a {
+  color: black;
+  text-decoration: none;
+}
+
 .single-experience h3 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: Arial;
+}
+
+.single-experience h3 a {
+  color: black;
+  text-decoration: none;
 }
 
 .footer {
