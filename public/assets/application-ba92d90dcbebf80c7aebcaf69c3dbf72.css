@@ -1,0 +1,1590 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+/* The contents of this stylesheet are divided into sections
+that correspond to specific pages on the site.  The first section
+deals specifically with the styling of the header.  The order
+is as follows:
+
+1. Header
+2. Homepage
+3. Login page
+4. Search results page
+5. Artist signup page
+6. Artist profile page
+7. Artist dashboard
+8. Create & Edit experience pages
+9. Show experience page
+10. Order page
+11. Order confirmation page
+
+After these come the media queries at around line 825.
+
+
+Commented out colors that are found throughout the stylesheet
+were left in intentionally to make editing divs and div content
+easier down the road.
+*/
+
+
+
+body {
+/*  background-color: orange;*/
+}
+
+.wrapper {
+  position: absolute;
+/*  background-color: red;*/
+  width: 100%;
+  height: 100%;
+  margin-left: -8px;
+  margin-top: -8px; 
+}
+
+.navigation {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 70px;
+}
+
+.logo {
+/*  background-color: purple;*/
+  float: left;
+  display: inline-block;
+  height: 70px;
+  width: 340px;
+}
+
+.logo  h1 {
+  color: white;
+  font-family: Arial;
+  font-size: 54px;
+  text-align: center;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.dashboard {
+/*  background-color: gray;*/
+  float: right;
+  display: inline-block;
+  height: 70px;
+  width: 80px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+/*  border-left: 2px solid white;*/
+}
+
+.dashboard p {
+  margin-top: 25px;
+}
+
+.dashboard a {
+  color: white;
+  display: block;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.logout {
+/*  background-color: gray;*/
+  float: right;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 5px;
+/*  border-left: 2px solid white;*/
+}
+
+.logout p {
+  margin-top: 25px;
+}
+
+.logout a {
+  color: white;
+  display: block;
+  margin-top: 25px;
+  text-decoration: none;
+}
+
+.res-dashboard {
+  display: none;
+}
+
+.res-logout {
+  display: none;
+}
+
+.res-dashboard a {
+  color: white;
+  text-decoration: none;
+}
+
+.res-logout a {
+  color: white;
+  text-decoration: none;
+}
+
+.search {
+/*  background-color: gray;*/
+  float: right;
+  display: inline-block;
+  height: 70px;
+  width: 405px;
+  margin-right: 0px;
+}
+
+form {
+  position: relative;
+  width: 100%;
+/*  background-color: orange;*/
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+.search-field {
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 1);
+  border: 0px solid #dbdbdb;
+  width: 265px;
+  font-size: 18px;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.search-button {
+  position:relative;
+  padding:6px 6px 6px 15px;
+  border:2px solid #ffffff;
+  background-color:#ffffff;
+  color:#000000;
+  font-size: 18px;
+  border-bottom-left-radius: 30px;
+  border-top-left-radius: 30px;
+  outline: none;
+}
+
+.search-button:hover  {
+  cursor: pointer;
+}
+
+
+
+
+/* SPECIFICALLY FOR HOME PAGE */
+.jumbotron {
+/*  background-color: white;*/
+  background-image: url('billboard.png');
+/*  background-color: orange;*/
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.jumbotron-text {
+/*  position: relative;*/
+  display: block;
+  width: 650px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.jumbotron-text h1 {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  font-family: Arial;
+  padding-top: 30px;
+}
+
+.jumbotron-text p {
+  color: white;
+  font-size: 20px;
+  margin-left: 40px;
+  margin-right: 40px; 
+  text-align: center;
+  font-family: Arial;
+}
+
+.jumbotron form {
+  display: block;
+/*  background-color: orange;*/
+  width: 62%;
+  margin: 0 auto;
+}
+
+.featured-experiences {
+  position: relative;
+/*  background-color: green;*/
+  width: 1150px;
+  min-height: 450px;
+  margin: 0 auto;
+}
+
+.featured-experiences h1 {
+  margin-top: 0px;
+  padding-top: 5px;
+  font-family: Arial;
+}
+
+.single-experience {
+  position: relative;
+  display: inline-block;
+/*  background-color: blue;*/
+  width: 30%;
+  height: 325px;
+  margin-left: 2.25%;
+}
+
+.hp-preview-pic {
+  position: relative;
+  background-color: gray;
+  height: 255px;
+  width: 340px;
+}
+
+.single-experience h2 {
+  margin-top: 0px;
+  font-family: Arial;
+}
+
+.single-experience h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Arial;
+}
+
+.footer {
+  position: relative;
+  background-color: black;
+  width: 100%;
+  height: 70px;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
+.footer a {
+  color: white;
+}
+
+
+
+
+/* LOGIN PAGE */
+.login-info {
+  width: 100%;
+  overflow: hidden;
+}
+
+.login {
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: white;
+  min-height: 200px;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.login form {
+  margin-left: 25px;
+}
+
+.login label {
+  font-family: Arial;
+}
+
+#email {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: 2px solid gray;
+  border-radius: 3px;
+  outline: none;
+}
+
+#password {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: 2px solid gray;
+  border-radius: 3px;
+  outline: none;
+}
+
+.login-button {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
+/* RESULTS PAGE */
+.main-content {
+  background-color: gray;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100%;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.main-content h1 {
+  margin-top: 0px;
+  padding-top: 25px;
+  padding-left: 25px;
+  font-family: Arial;
+}
+
+.result {
+  background-color: white;
+  display: block;
+  width: 920px;
+  min-height: 120px;
+  margin: 0 auto;
+  margin-top: 30px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.result h2 {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-family: Arial;
+}
+
+.result h4 {
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: Arial;
+}
+
+.result .h4-mobile {
+  display: none;
+}
+
+.result-thumb {
+  background-color: gray;
+  position: relative;
+  display: inline-block;
+  height: 105px;
+  width: 140px;
+  margin-left: 7px;
+  margin-top: 7px;
+  float: left;
+}
+
+.result h3 {
+  margin-top: 0px;
+  margin-left: 160px;
+  margin-bottom: 0px;
+  font-family: Arial;
+}
+
+.result p {
+  margin-top: 0px;
+  margin-left: 160px;
+  margin-right: 140px;
+  font-family: Arial;
+}
+
+.result input {
+  float: right;
+  clear: both;
+  position: relative;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  background-color: #f00;
+  height: 28px;
+  color: white;
+  font-family: Arial;
+  font-size: 18px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.result input:hover {
+  cursor: pointer;
+}
+
+
+
+
+/* SIGNUP */
+.upload-image {
+  float: left;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  margin-left: 25px;
+}
+
+.main-content .signup {
+/*  background-color: orange;*/
+  position: relative;
+  min-height: 100%;
+}
+
+.signup label {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-family: Arial;
+}
+
+.signup input {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+select {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 18px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+}
+
+textarea {
+  width: 500px;
+  height: 300px;
+  max-width: 500px;
+  max-height: 300px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  overflow: scroll;
+  vertical-align: top;
+  font-size: 18px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.main-content h2 {
+  margin-left: 25px;
+  font-family: Arial;
+}
+
+.info-left {
+  position: relative;
+  display: inline-block;
+  float: left;
+  min-height: 70%;
+  width: 50%;
+  margin-top: -8px;
+}
+
+.info-right {
+  position: relative;
+  min-height: 70%;
+  width: 50%;
+  float: right;
+}
+
+.artist-submit {
+  float: right;
+  margin-right: 46%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+
+
+/* PROFILE PAGE */
+.top-left {
+/*  background-color: green;*/
+  display: inline-block;
+  float: left;
+  width: 40%;
+  margin-top: 50px;
+}
+
+.profile-image {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  margin-left: 25px;
+}
+
+.top-right {
+/*  background-color: orange;*/
+  display: inline-block;
+  width: 55%;
+  min-height: 300px;
+  margin-top: 50px;
+  padding-bottom: 30px;
+}
+
+.top-right h1 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.top-right h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+.top-right p {
+  margin-top: 0px;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+
+
+
+/* DASHBOARD */
+
+.edit-settings-mobile {
+  display: none;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#orders {
+/*  background-color: orange;*/
+  display: inline-block;
+  margin-bottom: 0px;
+  cursor: pointer;
+}
+
+.edit-settings {
+/*  background-color: orange;*/
+  display: inline-block;
+  float: right;
+  margin-top: -27px;
+  margin-right: 50px;
+  font-size: 16px;
+}
+
+.edit-settings a {
+  color: black;
+}
+
+.edit-settings-mobile a {
+  color: black;
+}
+
+.order-toggle {
+  background-color: white;
+  width: 750px;
+  min-height: 75px;
+  margin-top: 10px;
+  margin-left: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.red {
+  background-color: red;
+}
+
+#exp-head {
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  text-decoration: underline;
+}
+
+.order-desc {
+  background-color: white;
+  width: 100%;
+  min-height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.order-desc p {
+  font-family: Arial;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 8px;
+}
+
+#dash {
+  margin-top: 40px;
+}
+
+.listed-exp {
+  display: block;
+  background-color: white;
+  width: 90%;
+  min-height: 40px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.listed-exp h2 {
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+.listed-exp p {
+  display: inline-block;
+  font-family: Arial;
+  font-size: 18px;
+  margin-top: 12px;
+  margin-left: 8px;
+}
+
+.listed-exp input {
+  margin-top: 4px;
+  margin-right: 4px;
+  font-family: Arial;
+  font-size: 24px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.exp-buttons {
+/*  background-color: red;*/
+  display: inline-block;
+  margin-top: -51px;
+  }
+
+.listed-exp form {
+  width: inherit;
+  display: inline-block;
+}
+
+
+
+
+/* CREATE EXPERIENCE & EDIT EXPERIENCE */
+.exp-create {
+/*  background-color: red;*/
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 60%;
+}
+
+.exp-create input {
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.exp-submit {
+  float: right;
+  margin-right: 20.5%;
+  cursor: pointer;
+  outline: none;
+}
+
+
+
+
+/* SHOW EXPERIENCE */
+.band-pic-small {
+  background-color: white;
+  display: inline-block;
+  float: left;
+  height: 150px;
+  width: 200px;
+  margin-left: 25px;
+}
+
+.num-price {
+  padding-left: 225px;
+}
+
+.num-price a {
+  color: black;
+  font-size: 20px;
+}
+
+.cta {
+  background-color: red;
+  color: white;
+  height: 40px;
+  font-size: 26px;
+  font-family: "Arial Black";
+  margin-left: 25px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+
+.cta a {
+  color: white;
+  text-decoration: none;
+}
+
+.exp-blurb {
+  margin: 0px 50px 0px 25px;
+}
+
+
+
+
+/* ORDER PAGE */
+.left-billing {
+/*  background-color: orange;*/
+  display: inline-block;
+  float: left;
+  width: 50%;
+  min-height: 500px;
+  margin-right: -4px;
+}
+
+.right-billing {
+/*  background-color: red;*/
+  display: inline-block;
+  width: 50%;
+  height: 500px;
+}
+
+.right-billing input {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.checkout {
+/*  background-color: green;*/
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.checkout input {
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Arial;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.checkout-submit {
+  position: absolute;
+  background-color: red;
+  color: white;
+  float: right;
+  margin-left: 134px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.checkout h2 {
+  font-size: 24px;
+  margin-left: -30px;
+}
+
+
+
+
+/* ORDER CONFIRMATION */
+.receipt-container {
+/*  background-color: red;*/
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.success {
+  background-color: white;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40%;
+  border-radius: 5px;
+}
+
+.success h1 {
+  margin-left: -26px;
+  text-align: center;
+}
+
+.success h2 {
+  margin-left: 0px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.receipt {
+  background-color: white;
+  width: 80%;
+  margin-top: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+}
+
+.receipt p {
+  text-align: center;
+  font-family: Arial;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.r-left {
+/*  background-color: orange;*/
+  display: inline-block;
+  float: left;
+  width: 60%;
+  margin-right: -4px;
+}
+
+.r-left h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.r-left p {
+/*  background-color: yellow;*/
+  display: inline-block;
+  text-align: left;
+  margin-top: 0px;
+  margin-left: 25px;
+  padding-top: 0px;
+}
+
+.r-right {
+/*  background-color: green;*/
+  display: inline-block;
+  width: 40%;
+}
+
+.r-right h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.r-right p {
+/*  background-color: yellow;*/
+  display: inline-block;
+  text-align: left;
+  margin-top: 0px;
+  margin-left: 100px;
+  padding-top: 0px;
+}
+
+.filler-left {
+  /*background-color: blue;*/
+  display: inline-block;
+  width: 60%;
+  margin-right: -4px;
+}
+
+.total {
+/*  background-color: red;*/
+  display: inline-block;
+  width: 40%;
+  padding-bottom: 30px;
+}
+
+.total h2 {
+  display: inline-block;
+}
+
+.total p {
+  display: inline-block;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES BEGIN HERE */
+
+@media (max-width: 1375px) {
+
+  .top-left {
+    display: block;
+    float: none;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .profile-image {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .profile-image {
+    display: block;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .top-right {
+    width: 95%;
+    min-height: 100px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 1240px) {
+
+  .upload-image {
+    margin-bottom: 70px;
+  }
+
+  .signup {
+    clear: both;
+  }
+}
+
+
+@media (max-width: 1170px) {
+
+  .featured-experiences {
+    width: 90%;
+    min-height: 370px;
+  }
+
+  .single-experience {
+    height: 280px;
+  }
+
+  .hp-preview-pic {
+    position: relative;
+    background-color: gray;
+    height: 225px;
+    width: 300px;
+  }
+
+  .result {
+    width: 750px;
+  }
+
+  .listed-exp h2 {
+    display: block;
+  }
+
+  .listed-exp p {
+    display: block;
+  }
+
+  .listed-exp input {
+    float: left;
+  }
+
+  .listed-exp {
+    width: 90%;
+  }
+
+  .listed-exp p {
+    margin-top: -14px;
+  }
+
+  .exp-buttons {
+    display: block;
+    float: left;
+    margin-top: -19px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+  }
+
+}
+
+
+@media (max-width: 1050px) {
+
+  .single-experience {
+    height: 250px;
+  }
+
+  .hp-preview-pic {
+    position: relative;
+    background-color: gray;
+    height: 195px;
+    width: 260px;
+  }
+
+  .single-experience h2 {
+    font-size: 20px;
+  }
+
+  .single-experience h3 {
+    font-size: 16px;
+  }
+
+  .result {
+    width: 650px;
+    min-height: 150px;
+  }
+
+  .result p {
+    margin-right: 50px;
+  }
+
+  .result input {
+    clear: both;
+  }
+
+  .order-toggle {
+    width: 90%;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+  .navigation {
+    height: 140px;
+  }
+
+  .res-dashboard {
+/*    background-color: gray;*/
+    float: right;
+    display: inline-block;
+    height: 20px;
+    width: 80px;
+    color: white;
+    font-size: 18px;
+}
+
+  .res-dashboard p {
+    margin-top: 0px;
+  }
+
+  .res-logout {
+/*    background-color: gray;*/
+    float: right;
+    display: inline-block;
+    height: 20px;
+    width: 70px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+  .res-logout p {
+    margin-top: 0px;
+  }
+
+  .logo {
+/*    background-color: green;*/
+    display: block;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    margin-top: -5px;
+  }
+
+  .logo h1 {
+    margin-left: -3px;
+  }
+
+  .dashboard {
+    display: none;
+  }
+
+  .logout {
+    display: none;
+  }
+
+  .search form {
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+
+  .search {
+/*    background-color: green;*/
+    display: block;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+  }
+
+  .jumbotron-text {
+    width: 80%;
+    height: 230px;
+    margin-top: 80px;
+  }
+
+  .jumbotron form {
+    display: none;
+  }
+
+  .featured-experiences {
+    min-height: 320px;
+  }
+
+  .single-experience {
+    height: 210px;
+  }
+
+  .hp-preview-pic {
+    position: relative;
+    background-color: gray;
+    height: 165px;
+    width: 220px;
+  }
+
+  .result {
+    width: 90%;
+  }
+
+  .info-left {
+    display: block;
+    float: none;
+    margin: 0 auto; 
+    width: 400px;
+  }
+
+  .info-right {
+    display: block;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  .exp-create {
+    width: 90%;
+  }
+
+  .exp-create input {
+    margin-left: 15px;
+  }
+
+  .exp-create textarea {
+    margin-left: 15px;
+    width: 90%;
+  }
+
+  .left-billing {
+ /*   background-color: green;*/
+    display: block;
+    float: none;
+    margin: 0 auto;
+  }
+
+  .checkout h2 {
+    margin-left: -28px;
+  }
+
+  .right-billing {
+    display: block;
+    clear: both;
+    margin: 0 auto;
+  }
+
+  .right-billing input {
+    margin-left: 0px;
+  }
+
+  .right-billing .checkout-submit {
+    margin-left: 135px;
+  }
+
+  .success {
+    width: 70%;
+  }
+
+  .receipt {
+    width: 90%;
+  }
+
+  .edit-settings-mobile {
+    display: block;
+    margin-top: -10px;
+    margin-right: 50px;
+    margin-bottom: -10px;
+  }
+
+  .edit-settings {
+    display: none;
+  }
+
+}
+
+
+/* IPAD */
+
+@media (max-width: 768px) {
+
+  .featured-experiences h1 {
+    text-align: center;
+  }
+
+  .single-experience {
+    display: block;
+    width: 400px;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+
+  .hp-preview-pic {
+    position: relative;
+    background-color: gray;
+    height: 300px;
+    width: 400px;
+  }
+
+  .single-experience h2 {
+    font-size: 1.5em;
+  }
+
+  .single-experience h3 {
+    font-size: 1.17em;
+  }
+
+  .result {
+    min-height: 100px;
+  }
+
+  .result-thumb {
+    display: none;
+  }
+
+  .result h2 {
+    margin-left: 10px;
+  }
+
+  .result h3 {
+    margin-left: 10px;
+  }
+
+  .result h4 {
+    display: none;
+  }
+
+  .result .h4-mobile {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .result p {
+    margin-left: 10px;
+  }
+
+  .signup textarea {
+    width: 80%;
+  }
+
+  .checkout  {
+    margin-left: 0px;
+  }
+
+  .listed-exp {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .exp-buttons {
+    margin-top: 4px;  
+  }
+
+  .checkout h2 {
+    margin-left: 20px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .jumbotron-text h1 {
+    font-size: 36px;
+  }
+
+  .result p {
+    margin-right: 10px;
+  }
+
+  .upload-image {
+    display: block;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 225px;
+  }
+
+  #artist_name {
+    margin-left: 25px;
+  }
+
+  .signup label {
+    margin-left: 25px;
+  }
+
+  .signup select {
+    margin-left: 25px;
+  }
+
+  .signup textarea {
+    margin-left: 25px;
+  }
+
+  .top-right {
+    width: 90%;
+  }
+
+  .band-pic-small {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 225px;
+  }
+
+  .num-price {
+    display: block;
+    clear: both;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .cta {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .exp-blurb {
+    margin-right: 20px;
+  }
+
+  .left-billing {
+    width: 75%;
+  }
+
+  .right-billing {
+    width: 75%;
+  }
+
+  .r-right p {
+    margin-left: 50%;
+  }
+
+  .filler-left {
+    width: 50%;
+  }
+
+  .total {
+    width: 50%;
+  }
+
+  .order-toggle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+@media (max-width: 525px) {
+  .profile-image {
+    width: 300px;
+    height: 225px;
+  }
+
+}
+
+
+/* IPHONE */
+
+@media (max-width: 480px) {
+
+  .jumbotron-text {
+    min-height: 290px;
+    margin-top: 50px;
+  }
+
+  .jumbotron-text h1 {
+    margin: 0px 15px;
+  }
+
+  .featured-experiences {
+    width: 280px;
+  }
+
+  .featured-experiences h1 {
+    font-size: 26px;
+  }
+
+  .single-experience {
+    display: block;
+    width: 280px;
+    height: 260px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+
+  .hp-preview-pic {
+    position: relative;
+    background-color: gray;
+    height: 210px;
+    width: 280px;
+  }
+
+  .login {
+    width: 300px;
+  }
+
+  .result h2 {
+    font-size: 22px;
+  }
+
+  .result input {
+    float: none;
+    display: block;
+    margin-left: 27.8%;
+  }
+
+  .info-left input {
+    margin-left: 25px;
+  }
+
+  .info-right input {
+    margin-left: 25px;
+  }
+
+  .left-billing {
+    width: 90%;
+  }
+
+  .right-billing {
+    width: 90%;
+  }
+
+  .total {
+    width: 50%;
+  }
+
+  .success {
+    width: 90%;
+  }
+
+  .r-right p {
+    margin-left: 40%;
+  }
+
+  .total h2 {
+    margin-left: 0px;
+  }
+
+  #orders {
+    font-size: 22px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
